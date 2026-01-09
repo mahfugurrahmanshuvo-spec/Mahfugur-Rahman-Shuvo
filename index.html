@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Finolac Industry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #fff8fc9c;
+        }
+header {
+    background:#000000;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+        /* LOGO STYLE */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 52px;
+    height: 62px;
+    transition: 0.3s ease;
+}
+
+/* LOGO HOVER ANIMATION */
+.logo:hover img {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* HEADER SCROLL EFFECT */
+header.shrink .logo img {
+    width: 30px;
+    height: 30px;
+}
+
+header.shrink h1 {
+    font-size: 18px;
+}
+
+/* MOBILE MENU */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        background: #0f172a;
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+        header h1 {
+            color: #ffae00fe;
+            font-size: 24px;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background:black;
+            color: white;
+            padding: 100px 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .hero button {
+            width: 180px;
+            padding: 12px;
+            background: #ffb301b1;
+            border: none;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero button:hover {
+            background: #ffb30172;
+        }
+
+        section {
+            background-color: #ffae00fe;
+            padding: 80px 10%;
+        }
+
+        .about, .products {
+            background: #0000009d;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .about h2, .products h2 {
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+       .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Colorful backgrounds for each product */
+.product:nth-child(1) { background-color: #d8d8d8db; }  
+.product:nth-child(2) { background-color: #d8d8d8db; } 
+.product:nth-child(3) { background-color: #d8d8d8db; }  /* গালা - Yellow */
+.product:nth-child(4) { background-color: #d8d8d8db; }  /* রজন - Green */
+.product:nth-child(5) { background-color: #d8d8d8db; }  /* মোম - Blue */
+.product:nth-child(6) { background-color: #d8d8d8db; }  /* তারপিন - Purple */
+.product:nth-child(7) { background-color: #d8d8d8db; }  /* থিনার - Pink */
+.product:nth-child(8) { background-color: #d8d8d8db; }  
+
+/* Hover effect */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+        footer {
+            background: #000000;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body >
+
+<header id="header">
+    <div class="logo">
+        <img src="logo.png" alt="Finolac Industry Logo" id="logoImg">
+        <h1>Finolac Industry</h1>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('about')">About</a>
+        <a onclick="scrollToSection('products')">Products</a>
+        <a onclick="scrollToSection('contact')">
+            <abbr title="01770110917">Contact</abbr></a>
+    </nav>
+</header>
+
+
+<div class="hero" id="home">
+    <h2>Quality Wood Finishing Solutions</h2>
+    <p>
+        Finolac Industry provides high-quality varnish, resin, wax and wood finishing
+        materials for professional and local markets.
+    </p>
+    <a href="https://wa.me/8801770110917" target="_blank">
+    <button>Contact Us</button>
+</a>
+
+</div>
+
+<section>
+    <div class="about" id="about">
+        <h2>About Us</h2>
+<p>
+<b>Finolac Industry একটি বিশ্বস্ত নাম কাঠের ফিনিশিং উপকরণ সরবরাহে।
+আমরা মানসম্মত লাক্ষা, রজন, মোম ও কাঠের বার্নিশের কাঁচামাল সরবরাহ করি
+যা দীর্ঘস্থায়ী, কার্যকর এবং ব্যবহারকারীদের আস্থার প্রতীক।
+আমাদের লক্ষ্য— সাশ্রয়ী দামে সেরা মান পৌঁছে দেওয়া।</b>
+</p>
+
+
+    </div>
+
+    <div class="products" id="products">
+        <h2><b>আমাদের পণ্যসমূহ:</b></h2>
+        <div class="product-list">
+            <div class="product" onclick="showProduct(this)">লাক্ষা</div>
+            <div class="product" onclick="showProduct(this)">গালা</div>
+            <div class="product" onclick="showProduct(this)">চাঁচ</div>
+            <div class="product" onclick="showProduct(this)">রজন</div>
+            <div class="product" onclick="showProduct(this)">মোম</div>
+            <div class="product" onclick="showProduct(this)">তারপিন</div>
+            <div class="product" onclick="showProduct(this)">থিনার</div>
+            <div class="product" onclick="showProduct(this)">স্পিরিট</div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>
+        📞 WhatsApp: 01770-110917 <br>
+        © 2025 Finolac Industry | All Rights Reserved
+    </p>
+</footer>
+
+
+<!-- JavaScript -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    // Scroll করলে logo ছোট হবে
+    window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
+
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({
+            behavior: "smooth"
+        });
+
+        // mobile menu বন্ধ হবে
+        if (window.innerWidth <= 768) {
+            document.getElementById("navMenu").style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
